@@ -1,0 +1,177 @@
+@charset "UTF-8";
+/*
+Theme Name: Cosmetic Ecommerce Store
+Author: TheMagnifico52
+Theme URI: https://www.themagnifico.net/products/free-cosmetic-wordpress-theme/
+Author URI: https://www.themagnifico.net/
+Description: Cosmetic ECommerce Store is a WordPress theme designed specifically to help users create an online store that sells cosmetic products. It is a combination of both design and functionality, providing a visually appealing and user-friendly interface for both customers and store owners. The theme is designed to cater to the needs of an online store that sells cosmetics, such as skincare products, makeup, hair care products, and other beauty products. It comes with a variety of features that are essential for an e-commerce store, such as product listings, shopping carts, checkout pages, and payment gateways. The design of the theme is feminine and focused on presenting the products attractively and engagingly, with high-quality images and detailed product descriptions. This helps customers to make informed decisions about their purchases. The Cosmetic E-commerce Store is also designed to be responsive, which means that it is optimized to work on all devices, including desktops, laptops, tablets, and mobile phones. This ensures that customers can access the store and make purchases from anywhere, at any time, using any device. Moreover, the theme can be customized to suit the needs and preferences of the store owner. This includes changing the color scheme, adding custom images and logos, and altering the layout of the website. 
+Version: 1.7.1
+Tested up to: 6.6
+Requires PHP: 7.2
+Requires at least: 5.0
+License: GNU General Public License v3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Template: fashion-estore
+Text Domain: cosmetic-ecommerce-zone
+Tags: custom-logo, one-column, two-columns, wide-blocks, block-styles, editor-style, sticky-post, custom-background, custom-colors, custom-header, custom-menu, footer-widgets, featured-images, flexible-header, full-width-template, threaded-comments, theme-options, rtl-language-support, left-sidebar, right-sidebar, grid-layout, blog, e-commerce, food-and-drink
+
+Cosmetic Ecommerce Store WordPress Theme has been created by TheMagnifico52(themagnifico.net), 2023.
+Cosmetic Ecommerce Store WordPress Theme is released under the terms of GNU GPL
+*/
+
+body,.main_header{
+    background: #fff7f1;
+}
+
+body,h1,h2,h3,h4,h5,h6{
+    font-family: 'Jost', Arial;
+}
+
+.sidebar h5, span.cart-value, .sticky .entry-title::before, #button, .sidebar input[type="submit"], .sidebar button[type="submit"], .comment-respond input#submit, .post-navigation .nav-previous a:hover, .post-navigation .nav-next a:hover, .posts-navigation .nav-previous a:hover, .posts-navigation .nav-next a:hover, .pro-button a, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce .woocommerce-ordering select, .woocommerce-account .woocommerce-MyAccount-navigation ul li, .wp-block-button__link, .sidebar .tagcloud a:hover, a.added_to_cart.wc-forward,.top-info,.navigation_header,#shop_services,span.onsale{
+    background: #003d48;
+}
+a,.home_product_cat h4:hover a,.woocommerce-message::before, .woocommerce-info::before, #colophon a:focus,.sidebar ul li a:hover,.call-info i,p.price, .woocommerce ul.products li.product .price, .woocommerce div.product p.price, .woocommerce div.product span.price {
+    color: #003d48;
+}
+#colophon a:hover, #colophon a:focus{
+    color: #e4c09c !important;
+}
+input.search-submit.btn.btn-primary{
+    background-color: #e4c09c;
+    border-color: #e4c09c;
+}
+.woocommerce-message, .woocommerce-info,.post-navigation .nav-previous a:hover, .post-navigation .nav-next a:hover, .posts-navigation .nav-previous a:hover, .posts-navigation .nav-next a:hover{
+    border-color: #003d48;
+}
+.wp-block-quote, .wp-block-quote:not(.is-large):not(.is-style-large), .wp-block-pullquote{
+    border-color: #003d48 !important;
+}
+.wp-block-button__link{
+    background: #003d48 !important;
+}
+.social-link i,.menu_cat i, .menu_cat,.main-navigation .menu > li > a{
+    color: #fff;
+}
+.navbar-brand h1.site-title, p.site-title{
+    font-size: 25px;
+}
+.top-info{
+    border: none;
+}
+a.account-btn {
+    background: #000;
+}
+a.account-btn:hover{
+    background: #e4c09c;
+}
+.social-link i:hover{
+    color: #e4c09c;
+}
+.pro_search,.home_product_cat, .product_cat,.product-box,.sidebar section,.article-box,.woocommerce ul.products li {
+    border: none;
+    background: #fff;
+}
+.wp-block-quote, .wp-block-quote:not(.is-large):not(.is-style-large), .wp-block-pullquote{
+    background: #fff !important;
+}
+.menu_cat i, .menu_cat {
+    background: transparent;
+    padding: 0;
+}
+.home_product_cat h4 a {
+    font-size: 18px;
+    text-transform: none;
+    font-weight: normal;
+}
+.main-navigation .menu > li {
+    font-size: 16px;
+    font-weight: 500;
+}
+.main-navigation .menu > li > a{
+    font-weight: bold;
+}
+#mySidenav.nav {
+    justify-content: flex-end;
+}
+.main-navigation .menu > li > a:hover, #site-navigation .menu ul li a:hover{
+    color: #e4c09c;
+}
+.main-navigation ul.sub-menu > li > a:hover, .main-navigation ul.sub-menu > li > a:focus {
+    background: #e4c09c;
+    color: #003d48 !important;
+}
+#site-navigation .menu ul li a{
+    color: #fff;
+}
+.slider-inner-box {
+    right: 35%;
+    left: 5%;
+    clip-path: none;
+    background: transparent;
+    padding: 0;
+    text-align: left;
+}
+.slider-inner-box h2 {
+    color: #000;
+    font-size: 50px;
+    text-transform: none;
+    font-weight: 500;
+}
+.slide-btn a{
+    background: #fff;
+    color: #003d48;
+    text-transform: capitalize;
+}
+.services-box i {
+    font-size: 40px;
+    color: #fff;
+}
+.services-box h4 {
+    font-size: 22px;
+    color: #fff;
+}
+.services-box p {
+    font-size: 15px;
+    color: #fff;
+}
+.product-box h4 {
+    font-size: 16px;
+    font-weight: 500;
+}
+.woocommerce ul.products li{
+    box-shadow: none;
+}
+.sidebar ul li a:hover{
+    color: #e4c09c;
+}
+@media screen and (min-width: 320px) and (max-width: 720px){
+    .slider-inner-box {
+        right: 5%;
+        text-align: center;
+    }
+    .slider-inner-box h2{
+        font-size: 20px;
+    }
+    #shop_services {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 721px) and (max-width: 999px){
+    .slider-inner-box h2 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .main-navigation .sub-menu > li > a, .main-navigation .sub-menu > li > .menu-item-link-return,.main-navigation .menu > li > a{
+        color: #fff !important;
+    }
+    .sidenav .closebtn, .toggle-nav i{
+        background: #e4c09c;
+    }
+    .main-navigation ul.sub-menu > li > a:hover, .main-navigation ul.sub-menu > li > a:focus, .main-navigation .menu > li > a:hover {
+        background: transparent;
+        color: #e4c09c !important;
+    }
+}
