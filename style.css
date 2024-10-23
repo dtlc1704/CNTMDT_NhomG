@@ -24,11 +24,11 @@ body,.main_header{
 }
 
 body,h1,h2,h3,h4,h5,h6{
-    font-family: 'Jost', Arial;
+    font-family: 'Jost', montserrat;
 }
 
 .sidebar h5, span.cart-value, .sticky .entry-title::before, #button, .sidebar input[type="submit"], .sidebar button[type="submit"], .comment-respond input#submit, .post-navigation .nav-previous a:hover, .post-navigation .nav-next a:hover, .posts-navigation .nav-previous a:hover, .posts-navigation .nav-next a:hover, .pro-button a, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce .woocommerce-ordering select, .woocommerce-account .woocommerce-MyAccount-navigation ul li, .wp-block-button__link, .sidebar .tagcloud a:hover, a.added_to_cart.wc-forward,.top-info,.navigation_header,#shop_services,span.onsale{
-    background: #003d48;
+    background: #89004a;
 }
 a,.home_product_cat h4:hover a,.woocommerce-message::before, .woocommerce-info::before, #colophon a:focus,.sidebar ul li a:hover,.call-info i,p.price, .woocommerce ul.products li.product .price, .woocommerce div.product p.price, .woocommerce div.product span.price {
     color: #003d48;
