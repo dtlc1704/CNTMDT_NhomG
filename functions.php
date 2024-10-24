@@ -323,3 +323,37 @@ if ( ! defined( 'FASHION_ESTORE_BUY_TEXT' ) ) {
 if ( ! defined( 'FASHION_ESTORE_LINK' ) ) {
     define( 'FASHION_ESTORE_LINK', esc_url( 'https://www.themagnifico.net/themes/ecommerce-store-wordpress-theme/', 'cosmetic-ecommerce-store') );
 }
+
+// To change add to cart text on single product page
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'woocommerce_custom_single_add_to_cart_text' ); 
+function woocommerce_custom_single_add_to_cart_text() {
+    return __( 'Thêm vào giỏ hàng', 'woocommerce' ); 
+}
+// To change add to cart text on product archives(Collection) page
+add_filter( 'woocommerce_product_add_to_cart_text', 'woocommerce_custom_product_add_to_cart_text' );  
+function woocommerce_custom_product_add_to_cart_text() {
+    return __(  'Thêm vào giỏ hàng', 'woocommerce' );
+}
+add_filter( 'woocommerce_dropdown_variation_attribute_options_args', 'custom_dropdown_variation_text' );
+function custom_dropdown_variation_text( $args ) {
+    $args['show_option_none'] = 'Phân loại'; // Đổi text "Choose an option" thành "Phân loại"
+    return $args;
+}
+add_filter( 'gettext', 'custom_translate_text', 999 );
+function custom_translate_text( $translated ) {
+    $translated = str_ireplace( 'Description', 'Mô tả', $translated ); // Đổi "Description" thành "Mô tả"
+    $translated = str_ireplace( 'Additional information', 'Thông tin thêm', $translated ); // Đổi "Additional information" thành "Thông tin thêm"
+    $translated = str_ireplace( 'Reviews', 'Đánh giá', $translated ); // Đổi "Reviews" thành "Đánh giá"
+    return $translated;
+}
+// Thay đổi tiêu đề "Related Products" thành "Sản phẩm liên quan"
+add_filter('woocommerce_product_related_products_heading', 'change_related_products_heading');
+
+function change_related_products_heading() {
+    return 'Sản phẩm liên quan';
+}
+add_filter( 'gettext', 'custom_clear_text', 999 );
+function custom_clear_text( $translated ) {
+    $translated = str_ireplace( 'Clear', 'Xóa', $translated ); // Đổi "Clear" thành "Xóa"
+    return $translated;
+}

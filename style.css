@@ -175,3 +175,24 @@ a.account-btn:hover{
         color: #e4c09c !important;
     }
 }
+
+/* Đặt SKU, Categories và Tags trên các hàng riêng biệt */
+.woocommerce div.product .sku_wrapper {
+    display: block;
+    margin-bottom: 10px; /* Khoảng cách giữa SKU và các mục khác */
+}
+
+.woocommerce div.product .product_meta {
+    display: block;
+    margin-bottom: 10px; /* Khoảng cách giữa Categories và Tags */
+}
+
+.woocommerce div.product .product_meta .posted_in,
+.woocommerce div.product .product_meta .tagged_as {
+    display: inline-block; /* Đặt Categories và Tags dưới dạng inline-block */
+    margin-right: 10px; /* Khoảng cách giữa Categories và Tags */
+}
+
+.woocommerce div.product .product_meta .posted_in {
+    margin-bottom: 10px; /* Khoảng cách giữa Categories và Tags */
+}
