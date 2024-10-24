@@ -357,3 +357,16 @@ function custom_clear_text( $translated ) {
     $translated = str_ireplace( 'Clear', 'Xóa', $translated ); // Đổi "Clear" thành "Xóa"
     return $translated;
 }
+
+// Hàm để thay đổi văn bản trong dropdown
+function custom_translate_sorting_options( $options ) {
+    $options['menu_order'] = 'Sắp xếp mặc định';
+    $options['popularity'] = 'Sắp xếp theo độ phổ biến';
+    $options['rating'] = 'Sắp xếp theo đánh giá trung bình';
+    $options['date'] = 'Sắp xếp theo mới nhất';
+    $options['price'] = 'Sắp xếp theo giá: thấp đến cao';
+    $options['price-desc'] = 'Sắp xếp theo giá: cao đến thấp';
+    return $options;
+}
+add_filter( 'woocommerce_default_catalog_orderby_options', 'custom_translate_sorting_options' );
+add_filter( 'woocommerce_catalog_orderby', 'custom_translate_sorting_options' );
