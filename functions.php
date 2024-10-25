@@ -382,3 +382,66 @@ function custom_coupon_placeholder() {
     <?php
 }
 add_action('wp_footer', 'custom_coupon_placeholder');
+
+// Thay đổi Change Address
+function custom_change_address_text() {
+    ?>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $('.shipping-calculator-button').text('Đổi địa chỉ');
+        });
+    </script>
+    <?php
+}
+add_action('wp_footer', 'custom_change_address_text');
+
+//Thay đổi giá, số lượng
+function change_cart_table_headers( $translated_text, $text, $domain ) {
+    switch ( $text ) {
+        case 'Price':
+            return 'Giá';
+        case 'Product':
+            return 'Sản phẩm';
+        case 'Quantity':
+            return 'Số lượng';
+        case 'Subtotal':
+            return 'Tổng tiền';
+    }
+    return $translated_text;
+}
+add_filter( 'gettext', 'change_cart_table_headers', 20, 3 );
+
+//Thay đổi ship to
+function change_shipping_to_text() {
+    ?>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $('.woocommerce-shipping-destination').html(function() {
+                return $(this).html().replace('Shipping to', 'Giao đến');
+            });
+        });
+    </script>
+    <?php
+}
+add_action('wp_footer', 'change_shipping_to_text');
+
+//Thay đổi Total
+function change_total_text( $translated_text, $text, $domain ) {
+    if ( $text === 'Total' ) {
+        return 'Tổng thanh toán';
+    }
+    return $translated_text;
+}
+add_filter( 'gettext', 'change_total_text', 20, 3 );
+
+// Thay đổi shipping
+function change_shipping_text() {
+    ?>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $('th:contains("Shipping")').text('Giao hàng');
+        });
+    </script>
+    <?php
+}
+add_action('wp_footer', 'change_shipping_text');
