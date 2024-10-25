@@ -370,3 +370,15 @@ function custom_translate_sorting_options( $options ) {
 }
 add_filter( 'woocommerce_default_catalog_orderby_options', 'custom_translate_sorting_options' );
 add_filter( 'woocommerce_catalog_orderby', 'custom_translate_sorting_options' );
+
+// Thay đổi placeholder Coupon
+function custom_coupon_placeholder() {
+    ?>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $('#coupon_code').attr('placeholder', 'Mã khuyến mãi');
+        });
+    </script>
+    <?php
+}
+add_action('wp_footer', 'custom_coupon_placeholder');
