@@ -445,3 +445,19 @@ function change_shipping_text() {
     <?php
 }
 add_action('wp_footer', 'change_shipping_text');
+
+// Ordernotes
+function change_order_notes_text( $translated_text, $text, $domain ) {
+    if ( $text === 'Order notes' ) {
+        return 'Ghi chú đặt hàng';
+    }
+    return $translated_text;
+}
+add_filter( 'gettext', 'change_order_notes_text', 20, 3 );
+
+//Thêm ghi chú
+function change_order_comments_placeholder( $fields ) {
+    $fields['order']['order_comments']['placeholder'] = 'Thêm ghi chú';
+    return $fields;
+}
+add_filter( 'woocommerce_checkout_fields', 'change_order_comments_placeholder' );
