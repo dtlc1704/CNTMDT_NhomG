@@ -461,3 +461,10 @@ function change_order_comments_placeholder( $fields ) {
     return $fields;
 }
 add_filter( 'woocommerce_checkout_fields', 'change_order_comments_placeholder' );
+
+
+//Ghi nhận thanh toán
+add_filter('woocommerce_thankyou_order_received_text', 'custom_thank_you_message', 10, 2);
+function custom_thank_you_message($thank_you_text, $order) {
+    return 'Cảm ơn. Đơn hàng của bạn đã được ghi nhận.';
+}
