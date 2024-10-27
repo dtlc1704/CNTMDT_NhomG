@@ -13,7 +13,9 @@
             <div class="col-lg-3 col-md-12 align-self-center">
                 <div class="navbar-brand">
                     <?php if ( has_custom_logo() ) : ?>
-                        <div class="site-logo"><?php the_custom_logo(); ?></div>
+                        <div class="site-logo" style="max-width: 1000px; width: 100%; height: auto;">
+                            <?php the_custom_logo(); ?>
+                        </div>
                     <?php endif; ?>
                     <?php $cosmetic_ecommerce_store_blog_info = get_bloginfo( 'name' ); ?>
                         <?php if ( ! empty( $cosmetic_ecommerce_store_blog_info ) ) : ?>
