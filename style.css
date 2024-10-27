@@ -209,3 +209,17 @@ a.account-btn:hover{
     max-width: 700px; /* Thay 150px bằng kích thước mong muốn */
     height: auto;
 }
+
+/* Định dạng cho thẻ <address> */
+address {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Màu nền nhạt */
+    color: #333; /* Màu chữ */
+    font-style: normal; /* Loại bỏ font in nghiêng mặc định của <address> */
+    box-sizing: border-box;
+}
