@@ -468,3 +468,20 @@ add_filter('woocommerce_thankyou_order_received_text', 'custom_thank_you_message
 function custom_thank_you_message($thank_you_text, $order) {
     return 'Cảm ơn. Đơn hàng của bạn đã được ghi nhận.';
 }
+
+
+function add_checkout_flow_title() {
+    if (is_cart()) {
+        echo '<h2 style="text-align: center;"><strong>Giỏ hàng</strong> → Chi tiết thanh toán → Hoàn tất đơn hàng</h2>';
+    } elseif (is_checkout() && !is_order_received_page()) {
+        echo '<h2 style="text-align: center;">Giỏ hàng → <strong>Chi tiết thanh toán</strong> → Hoàn tất đơn hàng</h2>';
+    } elseif (is_order_received_page()) {
+        echo '<h2 style="text-align: center;">Giỏ hàng → Chi tiết thanh toán → <strong>Hoàn tất đơn hàng</strong></h2>';
+    }
+}
+
+// Gọi hàm trên các trang tương ứng
+add_action('woocommerce_before_cart', 'add_checkout_flow_title', 5); // Trang Giỏ hàng
+add_action('woocommerce_before_checkout_form', 'add_checkout_flow_title', 5); // Trang Thanh toán
+add_action('woocommerce_thankyou', 'add_checkout_flow_title', 5); // Trang Hoàn tất Đơn hàng
+
