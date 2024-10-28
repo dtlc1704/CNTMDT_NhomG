@@ -31,7 +31,7 @@ body,h1,h2,h3,h4,h5,h6{
     background: #89004a;
 }
 a,.home_product_cat h4:hover a,.woocommerce-message::before, .woocommerce-info::before, #colophon a:focus,.sidebar ul li a:hover,.call-info i,p.price, .woocommerce ul.products li.product .price, .woocommerce div.product p.price, .woocommerce div.product span.price {
-    color: #003d48;
+    color: #89004a;
 }
 #colophon a:hover, #colophon a:focus{
     color: #e4c09c !important;
@@ -197,6 +197,7 @@ a.account-btn:hover{
     margin-bottom: 10px; /* Khoảng cách giữa Categories và Tags */
 }
 
+
 /*Freeshipping to lên*/
 .woocommerce-shipping-methods li label {
     font-size: 18px !important; /* Thay đổi kích thước chữ */
@@ -205,7 +206,72 @@ a.account-btn:hover{
     padding: 10px 0; /* Thêm khoảng cách trên và dưới */
     display: inline-block; /* Đảm bảo chữ không bị bó hẹp */
 }
+
 .site-logo img {
-    max-width: 700px; /* Thay 150px bằng kích thước mong muốn */
+    max-width: 1000px; /* Chỉnh kích thước mong muốn */
+	width: 100%;
+    height: auto; /* Đảm bảo giữ nguyên tỷ lệ */
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+    margin: 20px;
+}
+
+h2 strong {
+    color: #d9534f; /* Màu sắc nổi bật cho bước hiện tại */
+}
+
+.site-logo img {
+    max-width: 700px; /* Thay bằng kích thước mong muốn */
     height: auto;
+}
+
+/* CHỈNH SỬA MY ACCOUNT BIẾN MẤT THANH ĐIỀU KHIỂN */
+nav.woocommerce-MyAccount-navigation {
+    display: none !important;
+}
+
+/* CHỈNH SỬA MY ACCOUNT - EDIT ADDRESS CHO ĐẸP HƠN */
+.woocommerce-Addresses {
+    display: flex; /* Sử dụng flexbox để làm cho các cột hiển thị đều nhau */
+    justify-content: space-between; /* Tạo khoảng cách đồng đều giữa các cột */
+    gap: 20px; /* Khoảng cách giữa hai phần cột */
+}
+
+.woocommerce-Address {
+    width: 48%; /* Mỗi cột chiếm 48% màn hình để cân đối */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Thêm viền bóng để làm nổi bật */
+    padding: 20px; /* Thêm khoảng trắng bên trong cột */
+    border-radius: 5px; /* Bo tròn góc cột */
+    background: #ffffff; /* Đặt nền màu trắng để nổi bật hơn */
+}
+
+.woocommerce-Address-title {
+    text-align: center; /* Căn giữa tiêu đề */
+    margin-bottom: 10px; /* Thêm khoảng cách phía dưới tiêu đề */
+}
+
+.woocommerce-Address address {
+    line-height: 1.8; /* Điều chỉnh khoảng cách giữa các dòng để dễ đọc hơn */
+}
+
+/* CHỈNH MÀU BUTTON, ICON, CHỮ TRONG SẢN PHẨM BÁN CHẠY */
+.eael-product-list-wrapper.preset-1 .eael-product-list-add-to-cart-button a {
+    background: #89004A;
+    border-radius: 8px;
+}
+.eael-product-list-wrapper.preset-1 .eael-product-list-notice p i {
+    color: #89004A;
+}
+
+.eael-product-list-wrapper.preset-1 .eael-product-list-notice p {
+    color: #89004A;
+}
+
+/* CHỈNH KIỂU CHỮ THÀNH MONTSERRAT NƠI THANH CÔNG CỤ TÌM KIẾM*/
+.elementor-kit-61 input:not([type="button"]):not([type="submit"]), .elementor-kit-61 textarea, .elementor-kit-61 .elementor-field-textual {
+    font-family: "MONTSERRAT", Sans-serif;
+    font-weight: 400;
 }
