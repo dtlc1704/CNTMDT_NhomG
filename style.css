@@ -228,7 +228,6 @@ h2 strong {
     height: auto;
 }
 
-<<<<<<< HEAD
 /* CHỈNH SỬA MY ACCOUNT BIẾN MẤT THANH ĐIỀU KHIỂN */
 nav.woocommerce-MyAccount-navigation {
     display: none !important;
@@ -276,7 +275,6 @@ nav.woocommerce-MyAccount-navigation {
     font-family: "MONTSERRAT", Sans-serif;
     font-weight: 400;
 }
-=======
 /* Định dạng cho thẻ <address> */
 address {
     display: block;
@@ -290,4 +288,4 @@ address {
     font-style: normal; /* Loại bỏ font in nghiêng mặc định của <address> */
     box-sizing: border-box;
 }
->>>>>>> 53d457209a743074d65a343ab3169e3b8cac2c25
+
