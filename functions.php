@@ -469,7 +469,7 @@ function custom_thank_you_message($thank_you_text, $order) {
     return 'Cảm ơn. Đơn hàng của bạn đã được ghi nhận.';
 }
 
-
+// Thêm tiêu đề luồng các bước trên các trang Giỏ hàng, Thanh toán và Hoàn tất Đơn hàng
 function add_checkout_flow_title() {
     if (is_cart()) {
         echo '<h2 style="text-align: center;"><strong>Giỏ hàng</strong> → Chi tiết thanh toán → Hoàn tất đơn hàng</h2>';
@@ -484,4 +484,24 @@ function add_checkout_flow_title() {
 add_action('woocommerce_before_cart', 'add_checkout_flow_title', 5); // Trang Giỏ hàng
 add_action('woocommerce_before_checkout_form', 'add_checkout_flow_title', 5); // Trang Thanh toán
 add_action('woocommerce_thankyou', 'add_checkout_flow_title', 5); // Trang Hoàn tất Đơn hàng
+
+
+function custom_translate_woocommerce_strings( $translated_text, $text, $domain ) {
+    switch ( $translated_text ) {
+        case 'To track your order please enter your Order ID in the box below and press the "Track" button. This was given to you on your receipt and in the confirmation email you should have received.':
+            $translated_text = 'Để kiểm tra đơn hàng của bạn, vui lòng nhập Mã Đơn hàng vào ô dưới đây và nhấn nút "Theo dõi". Mã này đã được gửi cho bạn trong biên nhận và email xác nhận.';
+            break;
+        case 'Found in your order confirmation email.':
+            $translated_text = 'Tìm thấy trong email xác nhận đơn hàng của bạn.';
+            break;
+        case 'Email you used during checkout.':
+            $translated_text = 'Email bạn đã sử dụng khi thanh toán.';
+            break;
+        case 'Track':
+            $translated_text = 'Theo dõi';
+            break;
+    }
+    return $translated_text;
+}
+add_filter( 'gettext', 'custom_translate_woocommerce_strings', 20, 3 );
 
